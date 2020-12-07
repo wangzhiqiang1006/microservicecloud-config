@@ -1,9 +1,10 @@
 spring:
   profiles:
     active:
-      - dev
+    - dev
 ---
-server: 8201
+server:
+  port: 8202
 spring:
   profiles: dev  #开发环境
   application:
@@ -13,7 +14,8 @@ eureka:
     service-url:
       defaultZone: https://eureka-dev.com:7001/eureka/
 ---
-server: 8202
+server:
+  port: 8202
 spring:
   profiles: test  #测试环境
   application:
