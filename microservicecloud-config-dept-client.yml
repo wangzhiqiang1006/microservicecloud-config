@@ -17,27 +17,15 @@ spring:
     name: microservicecloud-config-dept-client
   datasource:
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.1.213:3306/cloudDB01
+    url: jdbc:mysql://localhost:3306/cloudDB01
     username: root
-    password: root
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
-    #   数据源其他配置
-    initialSize: 5
-    minIdle: 5
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 1 FROM DUAL
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
-    filters: stat,wall,log4j
-    maxPoolPreparedStatementPerConnectionSize: 20
-    useGlobalDataSourceStat: true
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    dbcp2:
+      initial-size: 5
+      max-total: 5
+      min-idle: 5
+      max-wait-millis: 200
 eureka:
   client:
     service-url:
@@ -67,27 +55,15 @@ spring:
     name: microservicecloud-config-dept-client
   datasource:
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.1.213:3306/cloudDB02
+    url: jdbc:mysql://localhost:3306/cloudDB02
     username: root
-    password: root
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
-    #   数据源其他配置
-    initialSize: 5
-    minIdle: 5
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 1 FROM DUAL
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
-    filters: stat,wall,log4j
-    maxPoolPreparedStatementPerConnectionSize: 20
-    useGlobalDataSourceStat: true
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    dbcp2:
+      initial-size: 5
+      max-total: 5
+      min-idle: 5
+      max-wait-millis: 200
 eureka:
   client:
     service-url:
